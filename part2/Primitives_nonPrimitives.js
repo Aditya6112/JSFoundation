@@ -1,6 +1,9 @@
 //types primitive and non-primitive
 //primitive types: string, number, boolean, null, undefined, symbol, bigint
 
+console.log(typeof null); //object
+//In JavaScript, 'null' is considered an object type, which is a known quirk of the language.
+
 //non-primitive types: object, array, function
 //primitive types are immutable, non-primitive types are mutable
 let str1 = "Hello";
@@ -64,4 +67,34 @@ console.log(`My name is ${name} and I am ${age} years old.`); //My name is John 
 
 let mult = "Multiplication of 2 and 3 is " + `${2 * 3}`;
 console.log(mult); //Multiplication of 2 and 3 is 6
+
+let sm1 = Symbol("Aditya");
+let sm2 = Symbol("Aditya");
+console.log(sm1 === sm2); //false
+//Symbols are unique and immutable primitive values used as identifiers for object properties.
+
+let username = {
+    firstname: "Aditya",
+    isLoggedIn: true,
+};
+console.log(username.firstname); //Aditya
+console.log(username.isLoggedIn); //true
+console.log(typeof username); //object
+//Objects are non-primitive types that store collections of key-value pairs.
+
+const username2 = {
+    firstname: "Aditya",
+};
+username2.firstname = "Sharma";
+console.log(username2.firstname); //Sharma
+//Even though 'username2' is declared with 'const', its properties can be modified.
+
+let username3 = {
+    "first name": "Aditya",
+};
+console.log(username3["first name"]); //Aditya
+//Object properties can have spaces if accessed using bracket notation.
+
+let today = new Date();
+console.log(today.getDate()); //prints the current date
 
