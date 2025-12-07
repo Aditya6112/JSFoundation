@@ -98,3 +98,24 @@ console.log(username3["first name"]); //Aditya
 let today = new Date();
 console.log(today.getDate()); //prints the current date
 
+let isValue = "2abc";
+console.log(Number(isValue)); //NaN 
+//Non-empty strings are truthy values in JavaScript.
+console.log(Number(null)); //0
+console.log(Number(undefined)); //NaN       
+console.log(Boolean("")); //false
+console.log(Boolean("Hello")); //true
+console.log(Boolean(0)); //false
+console.log(Boolean(42)); //true    
+console.log(Boolean(null)); //false
+console.log(Boolean(undefined)); //false        
+console.log(Boolean(NaN)); //false
+console.log(Boolean([])); //true
+console.log(Boolean({})); //true
+//In JavaScript, empty arrays and objects are considered truthy values. 
+console.log(Boolean(function() {})); //true
+//Functions are also considered truthy values.  
+//Summary: JavaScript has primitive and non-primitive types, each with unique behaviors regarding mutability and copying.
+//Template literals with '${}' allow embedding expressions in strings.
+//Symbols are unique identifiers, and objects store key-value pairs. 
+//Type coercion rules determine how different types convert to boolean values.
